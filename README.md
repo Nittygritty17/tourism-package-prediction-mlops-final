@@ -23,4 +23,4 @@ The app loads the trained model from:
 `nittygritty2106/travelpredictionmlops`
 
 ## Space URL
-`nittygritty2106/travelpredictionmlops-app`
+`nittygritty2106/travelpredictionmlops-app` 
