@@ -67,7 +67,8 @@ if submitted:
         "Designation": Designation,
         "MonthlyIncome": MonthlyIncome
     }])
-
+    input_df["__index_level_0__"] = 0
+    
     prediction = model.predict(input_df)[0]
 
     if hasattr(model, "predict_proba"):
