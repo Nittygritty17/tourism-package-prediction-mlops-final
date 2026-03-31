@@ -1,3 +1,9 @@
+traindf = trainds.to_pandas()
+testdf = testds.to_pandas()
+
+print("Train shape:", traindf.shape)
+print("Test shape:", testdf.shape)
+
 for dftemp in [traindf, testdf]:
     if "Gender" in dftemp.columns:
         dftemp["Gender"] = dftemp["Gender"].replace("Fe Male", "Female")
