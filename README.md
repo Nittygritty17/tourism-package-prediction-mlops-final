@@ -67,13 +67,6 @@ Consistency: Provides a unified, reproducible framework for all future package l
 By bridging the gap between machine learning and DevOps, "Visit with Us" moves to the forefront of the tourism industry. This MLOps pipeline does more than just predict sales; it establishes a robust, automated infrastructure that turns raw data into a sustainable competitive advantage, ensuring the company remains responsive to its customers and efficient in its operations.---
 
 
-title: Travel Prediction MLOps App
-emoji: 🚀
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 8501
-pinned: false
 ---
 
 # Travel Prediction MLOps App
