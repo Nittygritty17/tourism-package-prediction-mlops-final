@@ -12,16 +12,16 @@ jobs:
 
     env:
       HFTOKEN: ${{ secrets.HFTOKEN }}
-      HFDATASETREPOID: nittygritty2106/travel-prediction-dataset
+      HFDATASETREPOID: nittygritty2106/tourismdataset
       HFMODELREPOID: nittygritty2106/travelpredictionmlops
       HFSPACEREPOID: nittygritty2106/travelpredictionmlops-app
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
@@ -31,9 +31,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run training pipeline
+        env:
+          HFTOKEN: ${{ secrets.HFTOKEN }}
         run: |
           python train.py
 
       - name: Deploy app to Hugging Face Space
+        env:
+          HFTOKEN: ${{ secrets.HFTOKEN }}
         run: |
           python deploytohfspace.py
